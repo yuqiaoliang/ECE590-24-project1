@@ -12,7 +12,7 @@ def hello():
 @app.route('/name/<value>')
 def name(value):
     val = {"value": value}
-    return jsonify(val)
+    return ("The name you enter is" + val)
 
 @app.route('/time/')
 def time():

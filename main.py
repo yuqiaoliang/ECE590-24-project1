@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import jsonify
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -12,6 +13,13 @@ def hello():
 def name(value):
     val = {"value": value}
     return jsonify(val)
+
+@app.route('/time/')
+def time():
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    return(current_time)
+
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)

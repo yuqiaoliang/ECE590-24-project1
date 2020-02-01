@@ -1,2 +1,4 @@
 steps:
-    
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app","deploy"]
+timout: "1600s"

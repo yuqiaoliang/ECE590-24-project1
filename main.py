@@ -11,7 +11,7 @@ def hello():
 
 @app.route('/name/<value>')
 def name(value):
-    return ("The name you enter is " + value)
+    return ("The name you enter in the parameter is " + value)
 
 @app.route('/time/')
 def time():
